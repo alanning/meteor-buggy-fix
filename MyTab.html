@@ -1,0 +1,32 @@
+<head>
+  <title>DrinkTabThing</title>
+</head>
+
+<body>
+  {{renderPage}}
+</body>
+
+<template name="home">
+  <h2>Welcome to the bar!</h2>
+  <a href="/tabs/1">Start Tab</a>
+</template>
+
+<template name="tab">
+  <h1>Menu</h1>
+  {{#each drinks_menu}}
+    {{> drink_from_menu}}
+  {{/each}}
+  <hr>
+  <h1>My Tab</h1>
+  {{#each ordered_drinks}}
+  	{{> drink_from_tab}}
+  {{/each}}
+</template>
+
+<template name="drink_from_menu">
+	<div>{{name}}: ${{price}}<input type="button" value="buy one" class="buy_drink"/></div>
+</template>
+
+<template name="drink_from_tab">
+	<div>{{name}}: ${{price}}</div>
+</template>
