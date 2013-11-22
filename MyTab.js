@@ -54,7 +54,7 @@ if (Meteor.isServer) {
     });
 
     if (Tabs.find().count() === 0) {
-      Tabs.insert({_id:id, ordered_drinks:[]});
+      Tabs.insert({_id:"1", ordered_drinks:[]});
     }
 
     if (Drinks.find().count() === 0) {
